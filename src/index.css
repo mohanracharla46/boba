@@ -1,0 +1,121 @@
+:root {
+  /* Fonts */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+
+  /* Default Theme: Matcha Green */
+  --primary-color: #3E5622;
+  --primary-rgb: 62, 86, 34;
+  --primary-light: #F2F5EF;
+  --accent-color: #728D56;
+  --accent-rgb: 114, 141, 86;
+  --bg-color: #F8F7F3;
+  --bg-rgb: 248, 247, 243;
+  --card-bg: #FAF9F5;
+  --text-primary: #25311B;
+  --text-secondary: #5A6652;
+  --border-color: #E2E6DD;
+  --shadow-color: rgba(62, 86, 34, 0.06);
+  --glass-bg: rgba(250, 249, 245, 0.8);
+  --glass-border: rgba(226, 230, 221, 0.6);
+
+  /* Animation Timings */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+}
+
+/* Oolong Gold Theme */
+body.theme-oolong {
+  --primary-color: #824B19;
+  --primary-rgb: 130, 75, 25;
+  --primary-light: #FAF4EE;
+  --accent-color: #C17F38;
+  --accent-rgb: 193, 127, 56;
+  --bg-color: #F9F7F4;
+  --bg-rgb: 249, 247, 244;
+  --card-bg: #FAF8F4;
+  --text-primary: #47290D;
+  --text-secondary: #775A41;
+  --border-color: #ECE3DB;
+  --shadow-color: rgba(130, 75, 25, 0.05);
+  --glass-bg: rgba(250, 248, 244, 0.8);
+  --glass-border: rgba(236, 227, 219, 0.6);
+}
+
+/* Sakura Blossom Theme */
+body.theme-sakura {
+  --primary-color: #8F4A5E;
+  --primary-rgb: 143, 74, 94;
+  --primary-light: #FBF4F6;
+  --accent-color: #C67C8F;
+  --accent-rgb: 198, 124, 143;
+  --bg-color: #FAF5F6;
+  --bg-rgb: 250, 245, 246;
+  --card-bg: #FCF7F8;
+  --text-primary: #4E232E;
+  --text-secondary: #7F5863;
+  --border-color: #EFE1E4;
+  --shadow-color: rgba(143, 74, 94, 0.05);
+  --glass-bg: rgba(252, 247, 248, 0.8);
+  --glass-border: rgba(239, 225, 228, 0.6);
+}
+
+/* Taro Lavender Theme */
+body.theme-taro {
+  --primary-color: #5A457D;
+  --primary-rgb: 90, 69, 125;
+  --primary-light: #F5F2F9;
+  --accent-color: #8A75AC;
+  --accent-rgb: 138, 117, 172;
+  --bg-color: #F6F4FA;
+  --bg-rgb: 246, 244, 250;
+  --card-bg: #FAF9FC;
+  --text-primary: #2A1A40;
+  --text-secondary: #5F4F75;
+  --border-color: #ECE6F3;
+  --shadow-color: rgba(90, 69, 125, 0.05);
+  --glass-bg: rgba(250, 249, 252, 0.8);
+  --glass-border: rgba(236, 230, 243, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: var(--transition-smooth);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
