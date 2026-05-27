@@ -60,6 +60,28 @@ export default function Header() {
               Contact
             </NavLink>
           </li>
+          {/* Mobile-only session-based menu items */}
+          <li className="mobile-only-link">
+            {isLoggedIn ? (
+              <NavLink to="/profile" onClick={close} className={({ isActive }) => isActive ? 'active-link' : ''}>
+                My Profile
+              </NavLink>
+            ) : (
+              <NavLink to="/login" onClick={close} className={({ isActive }) => isActive ? 'active-link' : ''}>
+                Login
+              </NavLink>
+            )}
+          </li>
+          {isLoggedIn && (
+            <li className="mobile-only-link">
+              <button 
+                className="mobile-logout-btn" 
+                onClick={() => { logout(); close(); alert('Logged out successfully.') }}
+              >
+                Logout
+              </button>
+            </li>
+          )}
         </ul>
 
         {/* Right-side action buttons */}

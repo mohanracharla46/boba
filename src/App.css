@@ -116,6 +116,25 @@
     display: block;
     padding: 10px 0;
   }
+
+  .mobile-logout-btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: block;
+  }
+  
+  .mobile-logout-btn:hover {
+    color: var(--primary-color);
+  }
   
   /* Hamburger line transformations for active close-X state */
   .hamburger-btn.open .hamburger-line:nth-child(1) {
@@ -128,6 +147,13 @@
   
   .hamburger-btn.open .hamburger-line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* Mobile-only nav elements hidden on desktop */
+@media (min-width: 901px) {
+  .mobile-only-link {
+    display: none !important;
   }
 }
 
@@ -4331,6 +4357,25 @@
     border-radius: 20px;
     gap: 20px;
   }
+
+  /* About Page mobile optimizations */
+  .about-manifesto-title { font-size: 32px; margin: 16px 0 24px; }
+  .about-manifesto-lead { font-size: 15px; margin-bottom: 16px; }
+  .about-manifesto-body { font-size: 14px; }
+  .collage-num { font-size: 100px; top: -60px; }
+  .collage-block-title { font-size: 26px; }
+  .collage-block-text { font-size: 14px; }
+  .collage-img { height: 260px; border-radius: 20px; }
+  .collage-floating-tag { left: 16px; bottom: 20px; font-size: 11px; padding: 8px 16px; }
+  .cta-editorial-heading { font-size: 26px; }
+  
+  /* Daily Ritual Timeline mobile optimizations */
+  .ritual-timeline { padding-left: 28px; margin-left: 8px; gap: 40px; }
+  .timeline-dot-connector { left: -34px; top: 6px; }
+  .timeline-title { font-size: 18px; }
+  .timeline-text { font-size: 13.5px; }
+  .ritual-section-title { font-size: 28px; }
+  .ritual-section-subtitle { margin-bottom: 32px; }
 }
 
 /* ── 360px Smallest Phone ───────────────────────────────────────────────── */
