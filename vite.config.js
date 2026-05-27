@@ -6,5 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     allowedHosts: 'all',
+    // SPA fallback: serve index.html for all non-asset requests so that
+    // direct navigation to /menu, /favorites, etc. works without a 404.
+    historyApiFallback: true,
   },
 })
