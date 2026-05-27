@@ -20,7 +20,7 @@ export default function ProfilePage() {
   const [iceLevel, setIceLevel] = useState(user?.defaultIce || 'Regular')
   const [favoriteTheme, setFavoriteTheme] = useState(user?.favoriteTheme || 'Matcha Green')
   const [toastMsg, setToastMsg] = useState('')
-  const [activeView, setActiveView] = useState('dashboard') // 'dashboard' | 'orders' | 'security' | 'membership' | 'preferences' | 'themes' | 'help'
+  const [activeView, setActiveView] = useState('security') // 'security' | 'orders' | 'membership' | 'preferences' | 'themes' | 'help'
 
   // Stateful support ticket data
   const [tickets, setTickets] = useState([
@@ -140,98 +140,62 @@ export default function ProfilePage() {
     }
   ]
 
-  // Render Dashboard main view
-  const renderDashboard = () => (
-    <div className="account-dashboard-grid">
-      {/* 1. Your Infusions */}
-      <div className="account-dashboard-card" onClick={() => setActiveView('orders')}>
-        <div className="account-card-icon-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-          </svg>
-        </div>
-        <div className="account-card-info">
-          <h2 className="account-card-title">Your Infusions</h2>
-          <p className="account-card-desc">Track, re-steep, or review previous house infusions and pickup slips</p>
-        </div>
-      </div>
-
-      {/* 2. Login & Security */}
-      <div className="account-dashboard-card" onClick={() => setActiveView('security')}>
-        <div className="account-card-icon-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-          </svg>
-        </div>
-        <div className="account-card-info">
-          <h2 className="account-card-title">Login & Security</h2>
-          <p className="account-card-desc">Update full name, contact email address, and sanctuary credentials</p>
-        </div>
-      </div>
-
-      {/* 3. Sanctuary Membership */}
-      <div className="account-dashboard-card" onClick={() => setActiveView('membership')}>
-        <div className="account-card-icon-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-          </svg>
-        </div>
-        <div className="account-dashboard-card-badge">Gold Tier</div>
-        <div className="account-card-info">
-          <h2 className="account-card-title">Sanctuary Rewards</h2>
-          <p className="account-card-desc">View Gold Steep rewards tier, barcodes for scanner pickup, and perks</p>
-        </div>
-      </div>
-
-      {/* 4. Boba Preferences */}
-      <div className="account-dashboard-card" onClick={() => setActiveView('preferences')}>
-        <div className="account-card-icon-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-          </svg>
-        </div>
-        <div className="account-card-info">
-          <h2 className="account-card-title">Tea Customization</h2>
-          <p className="account-card-desc">Configure default house sweetness levels, ice levels, and base options</p>
-        </div>
-      </div>
-
-      {/* 5. Visual Themes */}
-      <div className="account-dashboard-card" onClick={() => setActiveView('themes')}>
-        <div className="account-card-icon-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-          </svg>
-        </div>
-        <div className="account-card-info">
-          <h2 className="account-card-title">Sanctuary Themes</h2>
-          <p className="account-card-desc">Select active visual styling profile (Matcha Green, Sakura, Oolong, Taro)</p>
-        </div>
-      </div>
-
-      {/* 6. Tea House Help */}
-      <div className="account-dashboard-card" onClick={() => setActiveView('help')}>
-        <div className="account-card-icon-wrapper">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-        </div>
-        <div className="account-card-info">
-          <h2 className="account-card-title">Tea House Help</h2>
-          <p className="account-card-desc">Read shop FAQ, check hours, and get in touch with our brewers</p>
-        </div>
-      </div>
-    </div>
-  )
-
-  // Render details sub-views
-  const renderBreadcrumb = (title) => (
-    <div className="account-breadcrumb">
-      <span className="breadcrumb-link" onClick={() => setActiveView('dashboard')}>Your Sanctuary</span>
-      <span className="breadcrumb-separator">›</span>
-      <span className="breadcrumb-active">{title}</span>
-    </div>
-  )
+  const navItems = [
+    {
+      key: 'security',
+      label: 'Login & Security',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      )
+    },
+    {
+      key: 'orders',
+      label: 'Your Infusions',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      )
+    },
+    {
+      key: 'membership',
+      label: 'Sanctuary Rewards',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+      )
+    },
+    {
+      key: 'preferences',
+      label: 'Tea Customization',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+        </svg>
+      )
+    },
+    {
+      key: 'themes',
+      label: 'Sanctuary Themes',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+        </svg>
+      )
+    },
+    {
+      key: 'help',
+      label: 'Support Tickets',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      )
+    }
+  ]
 
   return (
     <div className="page-container">
@@ -246,34 +210,42 @@ export default function ProfilePage() {
       )}
 
       {/* Profile Header */}
-      <div className="page-header" style={{ marginBottom: activeView === 'dashboard' ? '32px' : '16px' }}>
+      <div className="page-header" style={{ marginBottom: '32px' }}>
         <h1 className="page-title">Your Account Sanctuary</h1>
         <p className="page-subtitle">Manage details, customized infusions, rewards cards, and visual color styles.</p>
       </div>
 
-      {/* Render sub-views or dashboard */}
-      {activeView === 'dashboard' ? (
-        renderDashboard()
-      ) : (
-        <div className="profile-detail-container" style={{ animation: 'fadeIn 0.2s ease forwards' }}>
-          {/* Breadcrumb & Back Link */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '12px' }}>
-            {activeView === 'orders' && renderBreadcrumb('Your Infusions')}
-            {activeView === 'security' && renderBreadcrumb('Login & Security')}
-            {activeView === 'membership' && renderBreadcrumb('Sanctuary Rewards')}
-            {activeView === 'preferences' && renderBreadcrumb('Tea Customization')}
-            {activeView === 'themes' && renderBreadcrumb('Sanctuary Themes')}
-            {activeView === 'help' && renderBreadcrumb('Tea House Help')}
-
-            <button className="btn-secondary" onClick={() => setActiveView('dashboard')} style={{ padding: '8px 16px', fontSize: '13px', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ width: '14px', height: '14px' }}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-              Back to Sanctuary
-            </button>
+      <div className="profile-sidebar-layout">
+        {/* Left Column: Sidebar menu list */}
+        <aside className="profile-navigation-sidebar">
+          {/* User Card */}
+          <div className="sidebar-user-card">
+            <div className="sidebar-avatar">
+              {user.name.charAt(0).toUpperCase()}
+            </div>
+            <h3 className="sidebar-username">{user.name}</h3>
+            <span className="sidebar-membership-badge">Gold Steep Member</span>
           </div>
 
-          {/* Sub-view Content Panels */}
+          <div className="sidebar-divider" />
+
+          {/* Navigation Links */}
+          <nav className="sidebar-nav-menu">
+            {navItems.map((item) => (
+              <button
+                key={item.key}
+                className={`sidebar-nav-item ${activeView === item.key ? 'active' : ''}`}
+                onClick={() => setActiveView(item.key)}
+              >
+                {item.icon}
+                <span>{item.label}</span>
+              </button>
+            ))}
+          </nav>
+        </aside>
+
+        {/* Right Column: Active Content Panel */}
+        <main className="profile-active-content">
           {activeView === 'orders' && (
             <div className="profile-panel-card" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               <div>
@@ -322,7 +294,7 @@ export default function ProfilePage() {
           )}
 
           {activeView === 'security' && (
-            <div className="profile-panel-card" style={{ maxWidth: '600px', marginInline: 'auto' }}>
+            <div className="profile-panel-card" style={{ maxWidth: '600px', margin: '0 auto' }}>
               <h3 className="favorite-card-title" style={{ fontSize: '20px', marginBottom: '8px' }}>Login & Security</h3>
               <p className="favorite-card-desc" style={{ fontSize: '13.5px', marginBottom: '24px' }}>Edit your botanical sanctuary name and registered email details below.</p>
               <form onSubmit={handleSaveChanges} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -359,7 +331,7 @@ export default function ProfilePage() {
           )}
 
           {activeView === 'membership' && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', maxWidth: '800px', marginInline: 'auto' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', maxWidth: '800px', margin: '0 auto' }}>
               {/* Virtual Glassmorphic Member Card */}
               <div className="virtual-member-card">
                 <div className="virtual-card-glass-glow" />
@@ -432,7 +404,7 @@ export default function ProfilePage() {
           )}
 
           {activeView === 'preferences' && (
-            <div className="profile-panel-card" style={{ maxWidth: '600px', marginInline: 'auto' }}>
+            <div className="profile-panel-card" style={{ maxWidth: '600px', margin: '0 auto' }}>
               <h3 className="favorite-card-title" style={{ fontSize: '20px', marginBottom: '8px' }}>Tea Customization</h3>
               <p className="favorite-card-desc" style={{ fontSize: '13.5px', marginBottom: '24px' }}>Configure default sweetness and ice levels below. New menu card selections will default to these choices.</p>
               <form onSubmit={handleSaveChanges} style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -479,7 +451,7 @@ export default function ProfilePage() {
           )}
 
           {activeView === 'themes' && (
-            <div className="profile-panel-card" style={{ maxWidth: '600px', marginInline: 'auto' }}>
+            <div className="profile-panel-card" style={{ maxWidth: '600px', margin: '0 auto' }}>
               <h3 className="favorite-card-title" style={{ fontSize: '20px', marginBottom: '8px' }}>Sanctuary Themes</h3>
               <p className="favorite-card-desc" style={{ fontSize: '13.5px', marginBottom: '24px' }}>Select your favorite visual color profiles.Bob District dynamically changes accent tones based on this choice.</p>
               <form onSubmit={handleSaveChanges} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -669,8 +641,8 @@ export default function ProfilePage() {
               </div>
             </div>
           )}
-        </div>
-      )}
+        </main>
+      </div>
     </div>
   )
 }

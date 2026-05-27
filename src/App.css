@@ -3720,120 +3720,125 @@
   margin: 0 auto;
 }
 
-/* Amazon-Style Your Account Sanctuary Dashboard Styles */
-.account-dashboard-grid {
+/* Profile Sidebar & Content Dashboard Layout Styles */
+.profile-sidebar-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: start;
   width: 100%;
 }
 
-.account-dashboard-card {
+.profile-navigation-sidebar {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 24px;
-  padding: 28px;
+  padding: 32px 20px;
+  box-shadow: 0 8px 24px var(--shadow-color);
+  position: sticky;
+  top: 120px;
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.2s ease;
-  box-shadow: 0 4px 12px var(--shadow-color);
-  overflow: hidden;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.account-dashboard-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px var(--shadow-color);
-  border-color: var(--primary-color);
+.sidebar-user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.account-card-icon-wrapper {
-  background-color: var(--primary-light);
-  color: var(--primary-color);
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
+.sidebar-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.18);
+  margin-bottom: 14px;
 }
 
-.account-card-icon-wrapper svg {
-  width: 24px;
-  height: 24px;
-}
-
-.account-card-info {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex: 1;
-}
-
-.account-card-title {
+.sidebar-username {
   font-family: var(--font-serif);
   font-size: 18px;
   font-weight: 800;
   color: var(--text-primary);
+  margin: 0 0 6px 0;
+}
+
+.sidebar-membership-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary-color);
+  background-color: var(--primary-light);
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.sidebar-divider {
+  border-top: 1px solid var(--border-color);
   margin: 0;
 }
 
-.account-card-desc {
-  font-size: 13px;
-  line-height: 1.45;
-  color: var(--text-secondary);
-  margin: 0;
+.sidebar-nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.account-dashboard-card-badge {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background-color: var(--primary-color);
-  color: #FFFFFF;
-  font-size: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 4px 10px;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.2);
-}
-
-/* Breadcrumb Navigation Styles */
-.account-breadcrumb {
+.sidebar-nav-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13.5px;
-  font-weight: 600;
-}
-
-.breadcrumb-link {
-  color: var(--text-secondary);
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 14px;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: left;
   transition: var(--transition-fast);
 }
 
-.breadcrumb-link:hover {
-  color: var(--primary-color);
-  text-decoration: underline;
-}
-
-.breadcrumb-separator {
+.sidebar-nav-item svg {
+  width: 18px;
+  height: 18px;
   color: var(--text-secondary);
-  opacity: 0.5;
+  transition: var(--transition-fast);
+  flex-shrink: 0;
 }
 
-.breadcrumb-active {
+.sidebar-nav-item:hover {
   color: var(--primary-color);
+  background-color: var(--primary-light);
+}
+
+.sidebar-nav-item:hover svg {
+  color: var(--primary-color);
+}
+
+.sidebar-nav-item.active {
+  color: var(--primary-color);
+  background-color: var(--primary-light);
+  border-color: rgba(var(--primary-rgb), 0.15);
   font-weight: 700;
 }
 
-.profile-detail-container {
+.sidebar-nav-item.active svg {
+  color: var(--primary-color);
+}
+
+.profile-active-content {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -4068,7 +4073,73 @@
   /* Footer */
   .footer-content { grid-template-columns: 1fr; gap: 32px; padding: 40px 20px; }
   .footer-bottom { padding: 16px 20px; font-size: 12px; }
-  .footer-desc { max-width: 100%; }
+}
+
+/* ── 900px Mobile Profile Redirection ───────────────────────────────────── */
+@media (max-width: 900px) {
+  .profile-sidebar-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .profile-navigation-sidebar {
+    position: static;
+    padding: 24px;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+  }
+  
+  .sidebar-user-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 16px;
+  }
+  
+  .sidebar-avatar {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  
+  .sidebar-username {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  
+  .sidebar-membership-badge {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+  
+  .sidebar-divider {
+    display: none;
+  }
+  
+  .sidebar-nav-menu {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .sidebar-nav-item {
+    flex-shrink: 0;
+    width: auto;
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 12px;
+    gap: 8px;
+  }
+  
+  .sidebar-nav-item svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 /* ── 640px Large Phone ──────────────────────────────────────────────────── */
@@ -4215,45 +4286,36 @@
   }
 
   /* Profile Page mobile optimizations */
-  .profile-layout {
-    gap: 24px;
+  .profile-sidebar-layout {
+    gap: 20px;
   }
   .profile-panel-card {
-    padding: 24px 16px;
+    padding: 20px 16px;
     border-radius: 20px;
   }
-  .profile-avatar-large {
-    width: 80px;
-    height: 80px;
-    font-size: 32px;
+  .profile-navigation-sidebar {
+    padding: 16px 12px;
+  }
+  .sidebar-user-card {
+    gap: 12px;
+  }
+  .sidebar-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+  .sidebar-username {
+    font-size: 15px;
+  }
+  .sidebar-nav-item {
+    padding: 8px 12px;
+    font-size: 12.5px;
+    border-radius: 10px;
   }
   .order-history-card {
     padding: 16px !important;
     border-radius: 16px !important;
     gap: 12px !important;
-  }
-  .account-dashboard-grid {
-    gap: 16px;
-  }
-  .account-dashboard-card {
-    padding: 20px;
-    gap: 16px;
-    border-radius: 20px;
-  }
-  .account-card-icon-wrapper {
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
-  }
-  .account-card-icon-wrapper svg {
-    width: 20px;
-    height: 20px;
-  }
-  .account-card-title {
-    font-size: 16px;
-  }
-  .account-card-desc {
-    font-size: 12.5px;
   }
   .support-tickets-layout {
     grid-template-columns: 1fr;
@@ -4265,9 +4327,9 @@
   }
   .virtual-member-card {
     aspect-ratio: auto;
-    padding: 24px 20px;
+    padding: 20px 16px;
     border-radius: 20px;
-    gap: 24px;
+    gap: 20px;
   }
 }
 
@@ -4323,25 +4385,19 @@
 
   /* Profile Page extra small mobile optimizations */
   .profile-panel-card {
-    padding: 20px 12px;
+    padding: 16px 12px;
     border-radius: 16px;
   }
   .order-history-card {
     padding: 14px 10px !important;
     border-radius: 12px !important;
   }
-  .account-dashboard-card {
-    padding: 16px 12px;
-    gap: 12px;
-  }
-  .account-card-title {
-    font-size: 15px;
-  }
-  .account-card-desc {
+  .sidebar-nav-item {
+    padding: 6px 10px;
     font-size: 12px;
   }
   .virtual-member-card {
-    padding: 16px 12px;
+    padding: 14px 10px;
     border-radius: 16px;
   }
 }
