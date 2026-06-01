@@ -3,21 +3,21 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-serif: 'Fraunces', Georgia, serif;
 
-  /* Default Theme: Matcha Green */
-  --primary-color: #3E5622;
-  --primary-rgb: 62, 86, 34;
-  --primary-light: #F2F5EF;
-  --accent-color: #728D56;
-  --accent-rgb: 114, 141, 86;
-  --bg-color: #F8F7F3;
-  --bg-rgb: 248, 247, 243;
-  --card-bg: #FAF9F5;
-  --text-primary: #25311B;
-  --text-secondary: #5A6652;
-  --border-color: #E2E6DD;
-  --shadow-color: rgba(62, 86, 34, 0.06);
-  --glass-bg: rgba(250, 249, 245, 0.8);
-  --glass-border: rgba(226, 230, 221, 0.6);
+  /* Default Theme: Lavande-Menthe-Rose */
+  --primary-color: #6b5f91;
+  --primary-rgb: 107, 95, 145;
+  --primary-light: #FAF2F6;
+  --accent-color: #b7d9cb;
+  --accent-rgb: 183, 217, 203;
+  --bg-color: #FBF8FA;
+  --bg-rgb: 251, 248, 250;
+  --card-bg: #FCFAF6;
+  --text-primary: #2F273E;
+  --text-secondary: #6B5E78;
+  --border-color: #F3EAF0;
+  --shadow-color: rgba(107, 95, 145, 0.06);
+  --glass-bg: rgba(251, 248, 250, 0.85);
+  --glass-border: rgba(243, 234, 240, 0.6);
 
   /* Animation Timings */
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);

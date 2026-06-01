@@ -1,14 +1,14 @@
 // Premium brand hero theme content
 export const THEMES = {
   matcha: {
-    badge: '🍃 Premium House Blend',
-    title: 'Artisanal Brews, Rooted in Nature',
-    desc: 'Experience the perfect harmony of traditional Asian tea craft and modern botanical fusion.',
-    accent: '#728D56',
+    badge: '🔮 Premium Lavender Mint',
+    title: 'Artisanal Infusions, Steeped in Calm',
+    desc: 'Experience the soothing fusion of sweet French lavender blossoms and wild organic mountain mint.',
+    accent: '#b7d9cb',
     price: '$6.50',
-    tagline: 'Earthy Jasmine Rose',
-    detail: 'Stone-ground organic green tea whisked with organic jasmine extract and organic rose petals.',
-    homeTag: '🍃 Signature Brew'
+    tagline: 'Velvet Lavender Mint',
+    detail: 'Organic lavender floral distillate simmered with refreshing sweet mint and slow-cooked tapioca.',
+    homeTag: '🔮 Signature Brew'
   },
   oolong: {
     badge: '🍂 Roasted Mountain Oolong',

@@ -19,7 +19,7 @@ export default function AboutPage() {
         </p>
         <p className="about-manifesto-body">
           We set out to create a sanctuary. An oasis of sensory calm where high-mountain organic tea leaves meet freshly steam-distilled botanicals. No shortcuts, no artificial additions. Just wild jasmine, sweet rose petals, and slow-cooked tapioca prepared from scratch daily.
-        </p>
+        </p> 
       </div>
 
       {/* Asymmetric collage */}

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import bobaLogo from '../assets/bobalogo.png'
 
 /* --- Footer Component ---------------------------------------------------- */
 // Multi-column brand footer. Uses react-router <Link> for all internal nav
@@ -11,12 +12,7 @@ export default function Footer() {
         {/* Brand column */}
         <div className="footer-column brand-col">
           <div className="footer-brand">
-            <svg className="brand-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <rect x="13" y="1" width="2" height="6" rx="0.5" />
-              <rect x="5" y="6" width="14" height="2" rx="1" />
-              <path fillRule="evenodd" clipRule="evenodd" d="M7 8h10l-1.5 11.5c-.1.8-.8 1.5-1.6 1.5h-5.8c-.8 0-1.5-.7-1.6-1.5L7 8zm2.5 9.5a1.2 1.2 0 1 0 2.4 0 1.2 1.2 0 0 0-2.4 0zm3.5-1.5a1.2 1.2 0 1 0 2.4 0 1.2 1.2 0 0 0-2.4 0zm-2-3a1.2 1.2 0 1 0 2.4 0 1.2 1.2 0 0 0-2.4 0zm-1.5 3a1.2 1.2 0 1 0 2.4 0 1.2 1.2 0 0 0-2.4 0zm4.5 1.5a1.2 1.2 0 1 0 2.4 0 1.2 1.2 0 0 0-2.4 0z" />
-            </svg>
-            Boba District
+            <img className="brand-icon" src={bobaLogo} alt="Boba District Logo" />
           </div>
           <p className="footer-desc">
             Experience the tranquil, healing art of the traditional steep. Wild jasmine, organic matcha,

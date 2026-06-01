@@ -526,7 +526,7 @@ export default function ProfilePage() {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                                 <span style={{ fontSize: '14px', fontWeight: '800', color: 'var(--primary-color)' }}>{t.id}</span>
-                                <span className={`ticket-badge status-${t.status.toLowerCase()}`} style={{ fontSize: '11px', fontWeight: '800', padding: '2px 8px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.02em', backgroundColor: t.status === 'Resolved' ? 'rgba(74, 117, 86, 0.15)' : 'rgba(193, 127, 56, 0.15)', color: t.status === 'Resolved' ? '#728D56' : '#C17F38' }}>{t.status}</span>
+                                <span className={`ticket-badge status-${t.status.toLowerCase()}`} style={{ fontSize: '11px', fontWeight: '800', padding: '2px 8px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.02em', backgroundColor: t.status === 'Resolved' ? 'rgba(74, 117, 86, 0.15)' : 'rgba(193, 127, 56, 0.15)', color: t.status === 'Resolved' ? '#4a7556' : '#C17F38' }}>{t.status}</span>
                                 <span className={`ticket-badge urgency-${t.urgency.toLowerCase()}`} style={{ fontSize: '11px', fontWeight: '800', padding: '2px 8px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.02em', backgroundColor: 'rgba(128, 128, 128, 0.15)', color: 'var(--text-secondary)' }}>{t.urgency}</span>
                               </div>
                               <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>{t.date}</span>
