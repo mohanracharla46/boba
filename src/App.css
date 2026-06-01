@@ -4076,11 +4076,18 @@
 /* ── 768px Tablet Portrait ──────────────────────────────────────────────── */
 @media (max-width: 768px) {
   /* Navbar */
-  .navbar { height: 68px; padding: 12px 20px; }
+  .navbar { height: 72px; padding: 12px 20px; }
   .nav-brand { font-size: 19px; gap: 8px; }
-  .brand-icon { width: 22px; height: 22px; }
+  .brand-icon {
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+    position: relative;
+    top: 16px;
+    clip-path: inset(0 0 20% 0);
+  }
   .btn-nav-order, .btn-nav-login { display: none; }
-  .nav-links { top: 68px; }
+  .nav-links { top: 72px; }
   .nav-actions { gap: 8px; }
 
   /* Hero */
@@ -4211,9 +4218,17 @@
 /* ── 480px Standard Phone ───────────────────────────────────────────────── */
 @media (max-width: 480px) {
   /* Navbar */
-  .navbar { height: 60px; padding: 10px 16px; }
+  .navbar { height: 64px; padding: 10px 16px; }
   .nav-brand { font-size: 17px; }
-  .nav-links { top: 60px; }
+  .brand-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    position: relative;
+    top: 12px;
+    clip-path: inset(0 0 20% 0);
+  }
+  .nav-links { top: 64px; }
 
   /* Hero */
   .hero-card { min-height: 440px; }
@@ -4416,9 +4431,16 @@
 
 /* ── 360px Smallest Phone ───────────────────────────────────────────────── */
 @media (max-width: 360px) {
-  .navbar { padding: 10px 12px; }
+  .navbar { height: 60px; padding: 10px 12px; }
   .nav-brand { font-size: 15px; gap: 6px; }
-  .brand-icon { width: 18px; height: 18px; }
+  .brand-icon {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    position: relative;
+    top: 10px;
+    clip-path: inset(0 0 20% 0);
+  }
   .hero-title { font-size: 22px; }
   .hero-desc { font-size: 13px; }
   .philosophy-editorial-title { font-size: 21px; }
