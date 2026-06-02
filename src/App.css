@@ -36,11 +36,11 @@
 }
 
 .brand-icon {
-  width: 110px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
   position: relative;
-  top: 24px;
+  top: 32px;
   clip-path: inset(0 0 20% 0);
   transition: var(--transition-smooth);
 }
@@ -617,11 +617,15 @@
     font-size: 18px; /* Reduced from 21px */
   }
   .brand-icon {
-    width: 76px;
-    height: 76px;
+    width: 125px;
+    height: 125px;
     object-fit: contain;
     position: relative;
-    top: 16px;
+    top: 28px;
+  }
+  .footer-brand .brand-icon {
+    width: 125px;
+    height: 125px;
   }
   .btn-nav-order,
   .btn-nav-login {
@@ -2233,8 +2237,8 @@
 }
 
 .footer-brand .brand-icon {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
 }
 
@@ -4079,12 +4083,16 @@
   .navbar { height: 72px; padding: 12px 20px; }
   .nav-brand { font-size: 19px; gap: 8px; }
   .brand-icon {
-    width: 76px;
-    height: 76px;
+    width: 125px;
+    height: 125px;
     object-fit: contain;
     position: relative;
-    top: 16px;
+    top: 28px;
     clip-path: inset(0 0 20% 0);
+  }
+  .footer-brand .brand-icon {
+    width: 125px;
+    height: 125px;
   }
   .btn-nav-order, .btn-nav-login { display: none; }
   .nav-links { top: 72px; }
@@ -4221,12 +4229,16 @@
   .navbar { height: 64px; padding: 10px 16px; }
   .nav-brand { font-size: 17px; }
   .brand-icon {
-    width: 64px;
-    height: 64px;
+    width: 110px;
+    height: 110px;
     object-fit: contain;
     position: relative;
-    top: 12px;
+    top: 24px;
     clip-path: inset(0 0 20% 0);
+  }
+  .footer-brand .brand-icon {
+    width: 110px;
+    height: 110px;
   }
   .nav-links { top: 64px; }
 
@@ -4434,12 +4446,16 @@
   .navbar { height: 60px; padding: 10px 12px; }
   .nav-brand { font-size: 15px; gap: 6px; }
   .brand-icon {
-    width: 56px;
-    height: 56px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     position: relative;
-    top: 10px;
+    top: 22px;
     clip-path: inset(0 0 20% 0);
+  }
+  .footer-brand .brand-icon {
+    width: 100px;
+    height: 100px;
   }
   .hero-title { font-size: 22px; }
   .hero-desc { font-size: 13px; }
