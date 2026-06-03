@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { CartProvider } from './context/CartContext'
 import Header from './components/Header'
@@ -13,6 +13,7 @@ import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
 import ProfilePage from './pages/ProfilePage'
 import { AuthProvider } from './context/AuthContext'
+import bobaLogo from './assets/bobalogo.png'
 import './App.css'
 
 /* --- Scroll to top on every route change --------------------------------- */
@@ -35,9 +36,52 @@ function ScrollToTop() {
 //   /contact     → ContactPage
 
 export default function App() {
+  const [loading, setLoading] = useState(true)
+  const [fadeout, setFadeout] = useState(false)
+
+  useEffect(() => {
+    // Lock scroll when preloader is active
+    if (loading) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    // Set duration for preloader
+    const timer = setTimeout(() => {
+      setFadeout(true)
+      const removeTimer = setTimeout(() => {
+        setLoading(false)
+      }, 600) // matches CSS transition duration
+      return () => clearTimeout(removeTimer)
+    }, 1500)
+
+    return () => {
+      clearTimeout(timer)
+      document.body.style.overflow = ''
+    }
+  }, [loading])
+
   return (
     <AuthProvider>
       <CartProvider>
+        {loading && (
+          <div className={`preloader-overlay ${fadeout ? 'fade-out' : ''}`}>
+            <div className="preloader-content">
+              <div className="preloader-ring"></div>
+              <div className="preloader-logo-container">
+                <img className="preloader-logo" src={bobaLogo} alt="Boba District Logo" />
+              </div>
+              <div className="preloader-text-container">
+                <h1 className="preloader-title">Boba District</h1>
+                <div className="preloader-progress-track">
+                  <div className="preloader-progress-bar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="app-container">
           {/* Shared header — visible on every page */}
           <Header />
