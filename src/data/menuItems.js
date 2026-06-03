@@ -1,4 +1,36 @@
 // Brand Menu Items Dataset
+import mangoLassiSmoothieImg from '../assets/MANGO LASSI SMOOTHIE.png'
+import strawberryBananaSmoothieImg from '../assets/STRAWBERRY BANANA SMOOTHIE.png'
+import matchaGreenTeaSmoothieImg from '../assets/MATCHA GREEN TEA SMOOTHIE.png'
+import taroSmoothieImg from '../assets/TARO SMOOTHIE.png'
+import oreoSmoothieImg from '../assets/OREO SMOOTHIE.png'
+import honeydewSmoothieImg from '../assets/HONEYDEW SMOOTHIE.png'
+import thaiTeaSmoothieImg from '../assets/THAI TEA SMOOTHIE.png'
+import tigerBrownSugarMilkTeaImg from '../assets/TIGER BROWN SUGAR MILK TEA.png'
+import classicMilkTeaImg from '../assets/CLASSIC MILK TEA.png'
+import thaiMilkTeaImg from '../assets/THAI MILK TEA.png'
+import chaiMilkTeaImg from '../assets/CHAI MILK TEA.png'
+import chocolateMilkTeaImg from '../assets/CHOCOLATE MILK TEA.png'
+import honeydewMilkTeaImg from '../assets/HONEYDEW MILK TEA.png'
+import taroMilkTeaImg from '../assets/TARO MILK TEA.png'
+
+// Newly uploaded local image assets
+import pinaColadaSlushImg from '../assets/PINA COLADA SLUSH.png'
+import lycheeSlushImg from '../assets/LYCHEE SLUSH.png'
+import passionfruitSlushImg from '../assets/PASSIONFRUIT SLUSH.png'
+import peachSlushImg from '../assets/PEACH SLUSH .png'
+import mangoSlushImg from '../assets/MANGO SLUSH.png'
+import pineappleSlushImg from '../assets/PINEAPPLE SLUSH.png'
+import milkTeaImg from '../assets/Milk tea.png'
+import iceColdLemonadeImg from '../assets/ICE COLD LEMONADE.png'
+import peachLemonadeImg from '../assets/PEACH LEMONADE.png'
+import passionfruitLemonadeImg from '../assets/PASSIONFRUIT LEMONADE.png'
+import pineappleLemonadeImg from '../assets/PINEAPPLE LEMONADE.png'
+import matchaLatteImg from '../assets/MATCHA LATTE.png'
+import matchaLemonadeImg from '../assets/MATCHA LEMONADE.png'
+import matchaMangoImg from '../assets/MATCHA MANGO.png'
+import matchaStrawberryImg from '../assets/MATCHA STRAWBERRY.png'
+
 export const MENU_ITEMS = [
   // SMOOTHIES (5.95)
   {
@@ -7,7 +39,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Smoothies',
     desc: 'Creamy blend of sweet organic mangoes and fresh cold yogurt.',
-    image: 'https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80',
+    image: mangoLassiSmoothieImg,
     tags: ['LRG']
   },
   {
@@ -16,7 +48,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Smoothies',
     desc: 'A classic rich fusion of fresh organic strawberries and sweet ripe bananas.',
-    image: 'https://images.unsplash.com/photo-1553530979-7ee52a2670c4?w=500&auto=format&fit=crop&q=80',
+    image: strawberryBananaSmoothieImg,
     tags: ['LRG']
   },
   {
@@ -25,7 +57,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Smoothies',
     desc: 'Ceremonial stone-ground green tea whisked and blended into a cold creamy base.',
-    image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500&auto=format&fit=crop&q=80',
+    image: matchaGreenTeaSmoothieImg,
     tags: ['LRG']
   },
   {
@@ -34,7 +66,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Smoothies',
     desc: 'Rich, velvet blend of real organic purple taro root with sweet creamy milk.',
-    image: 'https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=500&auto=format&fit=crop&q=80',
+    image: taroSmoothieImg,
     tags: ['LRG']
   },
   {
@@ -43,7 +75,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Smoothies',
     desc: 'Indulgent, creamy blend loaded with crushed Oreo cookies and sweet vanilla cream.',
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500&auto=format&fit=crop&q=80',
+    image: oreoSmoothieImg,
     tags: ['LRG']
   },
   {
@@ -52,7 +84,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Smoothies',
     desc: 'Refreshing and sweet blend of ripe, sweet honeydew melon and fresh milk base.',
-    image: 'https://images.unsplash.com/photo-1505252585461-04db1ebb846d?w=500&auto=format&fit=crop&q=80',
+    image: honeydewSmoothieImg,
     tags: ['LRG']
   },
   {
@@ -61,7 +93,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Smoothies',
     desc: 'Spiced sweet Thai tea leaves slow-infused and blended into a creamy smoothie.',
-    image: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=80',
+    image: thaiTeaSmoothieImg,
     tags: ['LRG']
   },
 
@@ -72,7 +104,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Slushes',
     desc: 'Tropical icy slush of sweet golden pineapple nectar and rich coconut milk.',
-    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&auto=format&fit=crop&q=80',
+    image: pinaColadaSlushImg,
     tags: ['LRG']
   },
   {
@@ -81,7 +113,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Slushes',
     desc: 'Fragrant and sweet cold-blended tropical lychee fruit slush.',
-    image: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?w=500&auto=format&fit=crop&q=80',
+    image: lycheeSlushImg,
     tags: ['LRG']
   },
   {
@@ -90,7 +122,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Slushes',
     desc: 'Tangy and sweet cold-infused tropical purple passionfruit pulp slush.',
-    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&auto=format&fit=crop&q=80',
+    image: passionfruitSlushImg,
     tags: ['LRG']
   },
   {
@@ -99,7 +131,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Slushes',
     desc: 'Refreshing sweet icy slush crafted from fresh hand-picked ripe white peaches.',
-    image: 'https://images.unsplash.com/photo-1546173159-315724a31696?w=500&auto=format&fit=crop&q=80',
+    image: peachSlushImg,
     tags: ['LRG']
   },
   {
@@ -108,7 +140,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Slushes',
     desc: 'Ice-blended pure sweet mango nectar slush for a refreshing tropical escape.',
-    image: 'https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=500&auto=format&fit=crop&q=80',
+    image: mangoSlushImg,
     tags: ['LRG']
   },
   {
@@ -117,7 +149,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Slushes',
     desc: 'Chilled and refreshing gold pineapple juice ice-blended slush.',
-    image: 'https://images.unsplash.com/photo-1628258334864-3fdb1c4de6bc?w=500&auto=format&fit=crop&q=80',
+    image: pineappleSlushImg,
     tags: ['LRG']
   },
 
@@ -128,7 +160,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Classic Tea',
     desc: 'Slow-steeped signature high-mountain black tea leaves with a bold, rich aroma.',
-    image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80',
+    image: milkTeaImg,
     tags: ['LRG']
   },
 
@@ -139,7 +171,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Milk Tea',
     desc: 'Creamy milk tea drizzled with caramel-like house brown sugar syrup stripes.',
-    image: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=80',
+    image: tigerBrownSugarMilkTeaImg,
     tags: ['LRG']
   },
   {
@@ -148,7 +180,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Milk Tea',
     desc: 'Traditional high-mountain black milk tea brewed to rich, smooth perfection.',
-    image: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=80',
+    image: classicMilkTeaImg,
     tags: ['LRG']
   },
   {
@@ -157,7 +189,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Milk Tea',
     desc: 'Sweet, spiced orange Thai black tea topped with rich, creamy milk layer.',
-    image: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=80',
+    image: thaiMilkTeaImg,
     tags: ['LRG']
   },
   {
@@ -166,7 +198,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Milk Tea',
     desc: 'Exotic blend of robust black tea leaves, warm aromatic spices, and cream.',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc5c1a61cff?w=500&auto=format&fit=crop&q=80',
+    image: chaiMilkTeaImg,
     tags: ['LRG']
   },
   {
@@ -175,7 +207,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Milk Tea',
     desc: 'Sweet, velvety smooth milk tea infused with sweet organic purple taro root.',
-    image: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=80',
+    image: taroMilkTeaImg,
     tags: ['LRG']
   },
   {
@@ -184,7 +216,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Milk Tea',
     desc: 'Refreshing sweet blend of ripe, aromatic honeydew melon and classic milk tea.',
-    image: 'https://images.unsplash.com/photo-1505252585461-04db1ebb846d?w=500&auto=format&fit=crop&q=80',
+    image: honeydewMilkTeaImg,
     tags: ['LRG']
   },
   {
@@ -193,7 +225,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Milk Tea',
     desc: 'Rich, smooth milk tea infused with decadent organic cocoa and dark chocolate.',
-    image: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=80',
+    image: chocolateMilkTeaImg,
     tags: ['LRG']
   },
   {
@@ -213,7 +245,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Lemonades',
     desc: 'Traditional freshly squeezed tart organic lemons sweetened with pure cane sugar.',
-    image: 'https://images.unsplash.com/photo-1523362628745-0c100150b504?w=500&auto=format&fit=crop&q=80',
+    image: iceColdLemonadeImg,
     tags: ['LRG']
   },
   {
@@ -240,7 +272,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Lemonades',
     desc: 'Juicy summer peach nectar blended with a refreshing, tart squeezed lemonade base.',
-    image: 'https://images.unsplash.com/photo-1546173159-315724a31696?w=500&auto=format&fit=crop&q=80',
+    image: peachLemonadeImg,
     tags: ['LRG']
   },
   {
@@ -249,7 +281,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Lemonades',
     desc: 'Fragrant tropical purple passionfruit pulp combined with chilled fresh lemonade.',
-    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&auto=format&fit=crop&q=80',
+    image: passionfruitLemonadeImg,
     tags: ['LRG']
   },
   {
@@ -258,7 +290,7 @@ export const MENU_ITEMS = [
     price: 5.25,
     category: 'Lemonades',
     desc: 'Sweet golden pineapple nectar combined with tart fresh hand-squeezed lemonade.',
-    image: 'https://images.unsplash.com/photo-1628258334864-3fdb1c4de6bc?w=500&auto=format&fit=crop&q=80',
+    image: pineappleLemonadeImg,
     tags: ['LRG']
   },
 
@@ -269,7 +301,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Matcha Specials',
     desc: 'Ceremonial green tea whisked with creamy organic milk.',
-    image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500&auto=format&fit=crop&q=80',
+    image: matchaLatteImg,
     tags: ['LRG']
   },
   {
@@ -278,7 +310,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Matcha Specials',
     desc: 'Fragrant organic green tea layered with tart, freshly squeezed iced lemonade.',
-    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&auto=format&fit=crop&q=80',
+    image: matchaLemonadeImg,
     tags: ['LRG']
   },
   {
@@ -287,7 +319,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Matcha Specials',
     desc: 'Tropical layered drink combining sweet mango nectar and ceremonial green matcha.',
-    image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500&auto=format&fit=crop&q=80',
+    image: matchaMangoImg,
     tags: ['LRG']
   },
   {
@@ -296,7 +328,7 @@ export const MENU_ITEMS = [
     price: 5.95,
     category: 'Matcha Specials',
     desc: 'Premium green tea layers floating above sweet organic strawberries and cold milk.',
-    image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500&auto=format&fit=crop&q=80',
+    image: matchaStrawberryImg,
     tags: ['LRG']
   },
 
