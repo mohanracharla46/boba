@@ -10,14 +10,14 @@ const CartContext = createContext(null)
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([])
 
-  /* Add or increment a customised drink item */
-  const addToCart = (drink, sweetness, iceLevel, addons, selectedFlavor, quantity) => {
-    const activeAddonsList = Object.entries(addons)
+  /* Add or increment a customized food/drink item */
+  const addToCart = (item, customizations, quantity) => {
+    const activeAddonsList = Object.entries(customizations.addons || {})
       .filter(([, checked]) => checked)
       .map(([key]) => key)
       .sort()
       .join(',')
-    const customKey = `${drink.id}-${sweetness}-${iceLevel}-${activeAddonsList}-${selectedFlavor}`
+    const customKey = `${item.id}-${customizations.spiceLevel || ''}-${customizations.protein || ''}-${activeAddonsList}-${customizations.sweetness || ''}-${customizations.entree || ''}`
 
     setCart((prev) => {
       const idx = prev.findIndex((i) => i.customKey === customKey)
@@ -26,7 +26,7 @@ export function CartProvider({ children }) {
         next[idx] = { ...next[idx], quantity: next[idx].quantity + quantity }
         return next
       }
-      return [...prev, { customKey, drink, sweetness, iceLevel, addons: { ...addons }, selectedFlavor, quantity }]
+      return [...prev, { customKey, item, customizations: { ...customizations }, quantity }]
     })
   }
 

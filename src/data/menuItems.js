@@ -1,383 +1,375 @@
-// Brand Menu Items Dataset
-import mangoLassiSmoothieImg from '../assets/MANGO LASSI SMOOTHIE.png'
-import strawberryBananaSmoothieImg from '../assets/STRAWBERRY BANANA SMOOTHIE.png'
-import matchaGreenTeaSmoothieImg from '../assets/MATCHA GREEN TEA SMOOTHIE.png'
-import taroSmoothieImg from '../assets/TARO SMOOTHIE.png'
-import oreoSmoothieImg from '../assets/OREO SMOOTHIE.png'
-import honeydewSmoothieImg from '../assets/HONEYDEW SMOOTHIE.png'
-import thaiTeaSmoothieImg from '../assets/THAI TEA SMOOTHIE.png'
-import tigerBrownSugarMilkTeaImg from '../assets/TIGER BROWN SUGAR MILK TEA.png'
-import classicMilkTeaImg from '../assets/CLASSIC MILK TEA.png'
-import thaiMilkTeaImg from '../assets/THAI MILK TEA.png'
-import chaiMilkTeaImg from '../assets/CHAI MILK TEA.png'
-import chocolateMilkTeaImg from '../assets/CHOCOLATE MILK TEA.png'
-import honeydewMilkTeaImg from '../assets/HONEYDEW MILK TEA.png'
-import taroMilkTeaImg from '../assets/TARO MILK TEA.png'
+// Brand Menu Items Dataset (Southeast Asian / Thai Street Food)
+import bangkokFireBasilRiceImg from '../assets/Bangkok Fire Basil Rice.png'
+import pineappleIslandFriedRiceImg from '../assets/Pineapple Island Fried Rice.png'
+import classicThaiFriedRiceImg from '../assets/Classic Thai Fried Rice.png'
+import crabButterFriedRiceImg from '../assets/Crab Butter Fried Rice.png'
+import currySpicedFriedRiceImg from '../assets/Curry Spiced Fried Rice.png'
+import greenCurryFriedRiceImg from '../assets/Green Curry Fried Rice .png'
+import redCurryFriedRiceImg from '../assets/Red Curry Fried Rice.png'
+import kapiUmamiFriedRiceImg from '../assets/Kapi Umami Fried Rice.png'
 
-// Newly uploaded local image assets
-import pinaColadaSlushImg from '../assets/PINA COLADA SLUSH.png'
-import lycheeSlushImg from '../assets/LYCHEE SLUSH.png'
-import passionfruitSlushImg from '../assets/PASSIONFRUIT SLUSH.png'
-import peachSlushImg from '../assets/PEACH SLUSH .png'
-import mangoSlushImg from '../assets/MANGO SLUSH.png'
-import pineappleSlushImg from '../assets/PINEAPPLE SLUSH.png'
-import milkTeaImg from '../assets/Milk tea.png'
-import iceColdLemonadeImg from '../assets/ICE COLD LEMONADE.png'
-import peachLemonadeImg from '../assets/PEACH LEMONADE.png'
-import passionfruitLemonadeImg from '../assets/PASSIONFRUIT LEMONADE.png'
-import pineappleLemonadeImg from '../assets/PINEAPPLE LEMONADE.png'
-import matchaLatteImg from '../assets/MATCHA LATTE.png'
-import matchaLemonadeImg from '../assets/MATCHA LEMONADE.png'
-import matchaMangoImg from '../assets/MATCHA MANGO.png'
-import matchaStrawberryImg from '../assets/MATCHA STRAWBERRY.png'
+import heroDish from '../assets/hero_dish.png'
+import menuAppetizer from '../assets/menu_appetizer.png'
+import northernKhaoSoiImg from '../assets/Northern Khao Soi.png'
+
+import kanaHedHormImg from '../assets/KANA HED HORM.png'
+import vegThaiFriedRiceImg from '../assets/Vegetarian Thai Fried Rice.png'
+import plantBasilRiceImg from '../assets/Basil Fried Rice 🌶️.png'
+import plantPadThaiImg from '../assets/Vegetarian Pad Thai.png'
+import plantTomKhaImg from '../assets/Tom Kha (veg).png'
+import plantTomYumImg from '../assets/Tom Yum (veg).png'
+import plantEggplantTofuImg from '../assets/Eggplant & Tofu Curry.png'
+import plantChooCheeTofuImg from '../assets/Choo Chee Tofu.png'
+import plantTofuKheeMaoImg from '../assets/Tofu Khee Mao.png'
+
+import rubiesCoconutImg from '../assets/Red Rubies in Coconut Milk..png'
+import mangoStickyRiceImg from '../assets/Mango Sticky Rice.png'
+import bananaStickyRiceImg from '../assets/Banana Sticky Rice.png'
+import blackRiceMangoImg from '../assets/Black Rice Mango.png'
+import menuDessert from '../assets/menu_dessert.png'
+import lunchImg from '../assets/lunchimg.png'
 
 export const MENU_ITEMS = [
-  // SMOOTHIES (5.95)
+  // FRIED RICE (8 items)
   {
-    id: 'mango_lassi_smoothie',
-    name: 'Mango Lassi Smoothie',
-    price: 5.95,
-    category: 'Smoothies',
-    desc: 'Creamy blend of sweet organic mangoes and fresh cold yogurt.',
-    image: mangoLassiSmoothieImg,
-    tags: ['LRG']
+    id: 'bangkok_fire_basil_rice',
+    name: 'Bangkok Fire Basil Rice',
+    price: 15.99,
+    category: 'Fried Rice',
+    desc: "Spicy wok-fried jasmine rice with fresh holy basil, Thai bird's eye chilies, garlic, and savory house sauce.",
+    image: bangkokFireBasilRiceImg,
+    tags: ['Spicy', 'Popular']
   },
   {
-    id: 'strawberry_banana_smoothie',
-    name: 'Strawberry Banana Smoothie',
-    price: 5.95,
-    category: 'Smoothies',
-    desc: 'A classic rich fusion of fresh organic strawberries and sweet ripe bananas.',
-    image: strawberryBananaSmoothieImg,
-    tags: ['LRG']
+    id: 'pineapple_island_fried_rice',
+    name: 'Pineapple Island Fried Rice',
+    price: 15.99,
+    category: 'Fried Rice',
+    desc: 'Sweet and savory wok-tossed jasmine rice with fresh golden pineapple chunks, cashew nuts, raisins, and a hint of curry powder.',
+    image: pineappleIslandFriedRiceImg,
+    tags: ['Sweet', 'Chef Special']
   },
   {
-    id: 'matcha_green_tea_smoothie',
-    name: 'Matcha Green Tea Smoothie',
-    price: 5.95,
-    category: 'Smoothies',
-    desc: 'Ceremonial stone-ground green tea whisked and blended into a cold creamy base.',
-    image: matchaGreenTeaSmoothieImg,
-    tags: ['LRG']
+    id: 'classic_thai_fried_rice',
+    name: 'Classic Thai Fried Rice',
+    price: 15.99,
+    category: 'Fried Rice',
+    desc: 'Traditional Thai-style fried rice with organic eggs, sweet onions, scallions, tomatoes, and a light soy seasoning.',
+    image: classicThaiFriedRiceImg,
+    tags: ['Classic']
   },
   {
-    id: 'taro_smoothie',
-    name: 'Taro Smoothie',
-    price: 5.95,
-    category: 'Smoothies',
-    desc: 'Rich, velvet blend of real organic purple taro root with sweet creamy milk.',
-    image: taroSmoothieImg,
-    tags: ['LRG']
+    id: 'crab_butter_fried_rice',
+    name: 'Crab Butter Fried Rice',
+    price: 17.99,
+    category: 'Fried Rice',
+    desc: 'Premium jasmine rice wok-fried in rich crab butter, loaded with sweet lump crab meat, eggs, and fresh scallions.',
+    image: crabButterFriedRiceImg,
+    tags: ['Premium', 'Seafood']
   },
   {
-    id: 'oreo_smoothie',
-    name: 'Oreo Smoothie',
-    price: 5.95,
-    category: 'Smoothies',
-    desc: 'Indulgent, creamy blend loaded with crushed Oreo cookies and sweet vanilla cream.',
-    image: oreoSmoothieImg,
-    tags: ['LRG']
+    id: 'curry_spiced_fried_rice',
+    name: 'Curry Spiced Fried Rice',
+    price: 14.99,
+    category: 'Fried Rice',
+    desc: 'Aromatic yellow curry powder wok-tossed with jasmine rice, onions, carrots, and sweet peas.',
+    image: currySpicedFriedRiceImg,
+    tags: ['Aromatic']
   },
   {
-    id: 'honeydew_smoothie',
-    name: 'Honeydew Smoothie',
-    price: 5.95,
-    category: 'Smoothies',
-    desc: 'Refreshing and sweet blend of ripe, sweet honeydew melon and fresh milk base.',
-    image: honeydewSmoothieImg,
-    tags: ['LRG']
+    id: 'green_curry_fried_rice',
+    name: 'Green Curry Fried Rice',
+    price: 15.99,
+    category: 'Fried Rice',
+    desc: 'Flavorful fried rice infused with spicy green curry paste, bamboo shoots, eggplants, and sweet Thai basil.',
+    image: greenCurryFriedRiceImg,
+    tags: ['Spicy']
   },
   {
-    id: 'thai_tea_smoothie',
-    name: 'Thai Tea Smoothie',
-    price: 5.95,
-    category: 'Smoothies',
-    desc: 'Spiced sweet Thai tea leaves slow-infused and blended into a creamy smoothie.',
-    image: thaiTeaSmoothieImg,
-    tags: ['LRG']
-  },
-
-  // SLUSHES (5.95)
-  {
-    id: 'pina_colada_slush',
-    name: 'Pina Colada Slush',
-    price: 5.95,
-    category: 'Slushes',
-    desc: 'Tropical icy slush of sweet golden pineapple nectar and rich coconut milk.',
-    image: pinaColadaSlushImg,
-    tags: ['LRG']
+    id: 'red_curry_fried_rice',
+    name: 'Red Curry Fried Rice',
+    price: 15.99,
+    category: 'Fried Rice',
+    desc: 'Fragrant jasmine rice wok-tossed with spicy red curry paste, red bell peppers, and fresh kaffir lime leaves.',
+    image: redCurryFriedRiceImg,
+    tags: ['Spicy']
   },
   {
-    id: 'lychee_slush',
-    name: 'Lychee Slush',
-    price: 5.95,
-    category: 'Slushes',
-    desc: 'Fragrant and sweet cold-blended tropical lychee fruit slush.',
-    image: lycheeSlushImg,
-    tags: ['LRG']
-  },
-  {
-    id: 'passionfruit_slush',
-    name: 'Passionfruit Slush',
-    price: 5.95,
-    category: 'Slushes',
-    desc: 'Tangy and sweet cold-infused tropical purple passionfruit pulp slush.',
-    image: passionfruitSlushImg,
-    tags: ['LRG']
-  },
-  {
-    id: 'peach_slush',
-    name: 'Peach Slush',
-    price: 5.95,
-    category: 'Slushes',
-    desc: 'Refreshing sweet icy slush crafted from fresh hand-picked ripe white peaches.',
-    image: peachSlushImg,
-    tags: ['LRG']
-  },
-  {
-    id: 'mango_slush',
-    name: 'Mango Slush',
-    price: 5.95,
-    category: 'Slushes',
-    desc: 'Ice-blended pure sweet mango nectar slush for a refreshing tropical escape.',
-    image: mangoSlushImg,
-    tags: ['LRG']
-  },
-  {
-    id: 'pineapple_slush',
-    name: 'Pineapple Slush',
-    price: 5.95,
-    category: 'Slushes',
-    desc: 'Chilled and refreshing gold pineapple juice ice-blended slush.',
-    image: pineappleSlushImg,
-    tags: ['LRG']
+    id: 'kapi_umami_fried_rice',
+    name: 'Kapi Umami Fried Rice',
+    price: 17.99,
+    category: 'Fried Rice',
+    desc: 'Authentic Thai shrimp paste fried rice served with sweet pork, shredded green mango, red onions, and lime.',
+    image: kapiUmamiFriedRiceImg,
+    tags: ['Umami', 'Authentic']
   },
 
-  // CLASSIC TEA (5.25)
+  // SOUTHEAST ASIAN STREET KITCHEN (7 items)
   {
-    id: 'special_blend_black_tea',
-    name: 'Special Blend Black Tea',
-    price: 5.25,
-    category: 'Classic Tea',
-    desc: 'Slow-steeped signature high-mountain black tea leaves with a bold, rich aroma.',
-    image: milkTeaImg,
-    tags: ['LRG']
+    id: 'hainanese_chicken_rice',
+    name: 'Hainanese Chicken Rice',
+    price: 13.99,
+    category: 'Southeast Asian Street Kitchen',
+    desc: 'Poached tender chicken served over aromatic garlic-ginger rice, accompanied by spicy chili sauce and soy paste.',
+    image: heroDish,
+    tags: ['Signature', 'Classic']
+  },
+  {
+    id: 'thai_chicken_biryani',
+    name: 'Thai Chicken Biryani',
+    price: 16.99,
+    category: 'Southeast Asian Street Kitchen',
+    desc: 'Thai-style chicken biryani cooked with aromatic dry spices, served with sweet chili sauce and fried shallots.',
+    image: menuAppetizer,
+    tags: ['Aromatic']
+  },
+  {
+    id: 'northern_khao_soi',
+    name: 'Northern Khao Soi',
+    price: 18.99,
+    category: 'Southeast Asian Street Kitchen',
+    desc: 'Rich Northern Thai coconut curry noodle soup with tender chicken, pickled mustard greens, raw shallots, and crispy egg noodles.',
+    image: northernKhaoSoiImg,
+    tags: ['Chef Special', 'Spicy']
+  },
+  {
+    id: 'thai_orange_sesame_chicken',
+    name: 'Thai Orange Sesame Chicken',
+    price: 15.99,
+    category: 'Southeast Asian Street Kitchen',
+    desc: 'Crispy chicken bites tossed in a tangy orange glaze, topped with toasted sesame seeds and fresh scallions.',
+    image: menuAppetizer,
+    tags: ['Sweet']
+  },
+  {
+    id: 'thai_sweet_and_sour_chicken',
+    name: 'Thai Sweet and Sour Chicken',
+    price: 15.99,
+    category: 'Southeast Asian Street Kitchen',
+    desc: 'Stir-fried crispy chicken with pineapple, cucumbers, onions, and bell peppers in a tangy sweet-and-sour glaze.',
+    image: menuAppetizer,
+    tags: ['Sweet & Sour']
+  },
+  {
+    id: 'spicy_basil_leaves',
+    name: 'Spicy Basil Leaves',
+    price: 15.99,
+    category: 'Southeast Asian Street Kitchen',
+    desc: "Fiery stir-fry of minced chicken, garlic, Thai bird's eye chilies, and sweet holy basil leaves.",
+    image: menuAppetizer,
+    tags: ['Spicy', 'Popular']
+  },
+  {
+    id: 'thai_rama_garden',
+    name: 'Thai Rama Garden',
+    price: 15.99,
+    category: 'Southeast Asian Street Kitchen',
+    desc: 'Steamed chicken and fresh seasonal vegetables served over a bed of rich, creamy house peanut sauce.',
+    image: menuAppetizer,
+    tags: ['Savory']
   },
 
-  // MILK TEA (5.25)
+  // PLANT-BASED KITCHEN (11 items)
   {
-    id: 'tiger_brown_sugar_milk_tea',
-    name: 'Tiger Brown Sugar Milk Tea',
-    price: 5.25,
-    category: 'Milk Tea',
-    desc: 'Creamy milk tea drizzled with caramel-like house brown sugar syrup stripes.',
-    image: tigerBrownSugarMilkTeaImg,
-    tags: ['LRG']
+    id: 'ka_na_hed_horm',
+    name: 'Ka-Na Hed Horm',
+    price: 14.00,
+    category: 'Plant-Based Kitchen',
+    desc: 'Chinese broccoli and shiitake mushrooms sautéed in a savory plant-based sauce.',
+    image: kanaHedHormImg,
+    tags: ['Vegan', 'Healthy']
   },
   {
-    id: 'classic_milk_tea',
-    name: 'Classic Milk Tea',
-    price: 5.25,
-    category: 'Milk Tea',
-    desc: 'Traditional high-mountain black milk tea brewed to rich, smooth perfection.',
-    image: classicMilkTeaImg,
-    tags: ['LRG']
+    id: 'vegetarian_thai_fried_rice',
+    name: 'Vegetarian Thai Fried Rice',
+    price: 14.00,
+    category: 'Plant-Based Kitchen',
+    desc: 'Classic wok-tossed jasmine rice with organic tofu, mixed seasonal vegetables, and light soy sauce.',
+    image: vegThaiFriedRiceImg,
+    tags: ['Vegan Option', 'Healthy']
   },
   {
-    id: 'thai_milk_tea',
-    name: 'Thai Milk Tea',
-    price: 5.25,
-    category: 'Milk Tea',
-    desc: 'Sweet, spiced orange Thai black tea topped with rich, creamy milk layer.',
-    image: thaiMilkTeaImg,
-    tags: ['LRG']
+    id: 'basil_fried_rice_veg',
+    name: 'Basil Fried Rice',
+    price: 14.00,
+    category: 'Plant-Based Kitchen',
+    desc: 'Spicy plant-based fried rice with fresh holy basil, sweet bell peppers, onions, and organic tofu.',
+    image: plantBasilRiceImg,
+    tags: ['Vegan Option', 'Spicy']
   },
   {
-    id: 'chai_milk_tea',
-    name: 'Chai Milk Tea',
-    price: 5.25,
-    category: 'Milk Tea',
-    desc: 'Exotic blend of robust black tea leaves, warm aromatic spices, and cream.',
-    image: chaiMilkTeaImg,
-    tags: ['LRG']
+    id: 'vegetarian_pad_thai',
+    name: 'Vegetarian Pad Thai',
+    price: 14.00,
+    category: 'Plant-Based Kitchen',
+    desc: 'Thin rice noodles stir-fried with sweet tamarind glaze, tofu, bean sprouts, chives, and crushed peanuts.',
+    image: plantPadThaiImg,
+    tags: ['Vegan Option', 'Classic']
   },
   {
-    id: 'taro_milk_tea',
-    name: 'Taro Milk Tea',
-    price: 5.25,
-    category: 'Milk Tea',
-    desc: 'Sweet, velvety smooth milk tea infused with sweet organic purple taro root.',
-    image: taroMilkTeaImg,
-    tags: ['LRG']
+    id: 'tom_kha_veg_small',
+    name: 'Tom Kha — Veg Small',
+    price: 5.99,
+    category: 'Plant-Based Kitchen',
+    desc: 'Aromatic small bowl of coconut soup infused with lemongrass, galangal, kaffir lime leaves, mushrooms, and tofu.',
+    image: plantTomKhaImg,
+    tags: ['Vegan', 'Soup']
   },
   {
-    id: 'honeydew_milk_tea',
-    name: 'Honeydew Milk Tea',
-    price: 5.25,
-    category: 'Milk Tea',
-    desc: 'Refreshing sweet blend of ripe, aromatic honeydew melon and classic milk tea.',
-    image: honeydewMilkTeaImg,
-    tags: ['LRG']
+    id: 'tom_kha_veg_large',
+    name: 'Tom Kha — Veg Large',
+    price: 11.99,
+    category: 'Plant-Based Kitchen',
+    desc: 'Large sharing bowl of rich, creamy coconut herb soup with seasonal vegetables and organic tofu.',
+    image: plantTomKhaImg,
+    tags: ['Vegan', 'Soup']
   },
   {
-    id: 'chocolate_milk_tea',
-    name: 'Chocolate Milk Tea',
-    price: 5.25,
-    category: 'Milk Tea',
-    desc: 'Rich, smooth milk tea infused with decadent organic cocoa and dark chocolate.',
-    image: chocolateMilkTeaImg,
-    tags: ['LRG']
+    id: 'tom_yum_veg_small',
+    name: 'Tom Yum — Veg Small',
+    price: 5.99,
+    category: 'Plant-Based Kitchen',
+    desc: 'Spicy and sour small bowl of herb broth with lemongrass, lime juice, mushrooms, tomatoes, and tofu.',
+    image: plantTomYumImg,
+    tags: ['Vegan', 'Spicy']
   },
   {
-    id: 'dark_roast_coffee',
-    name: 'Dark Roast Coffee',
-    price: 5.25,
-    category: 'Milk Tea',
-    desc: 'Decadent slow-dripped bold espresso blended with sweet, creamy dairy.',
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop&q=80',
-    tags: ['LRG']
-  },
-
-  // LEMONADES (5.25)
-  {
-    id: 'ice_cold_lemonade',
-    name: 'Ice Cold Lemonade',
-    price: 5.25,
-    category: 'Lemonades',
-    desc: 'Traditional freshly squeezed tart organic lemons sweetened with pure cane sugar.',
-    image: iceColdLemonadeImg,
-    tags: ['LRG']
+    id: 'tom_yum_veg_large',
+    name: 'Tom Yum — Veg Large',
+    price: 11.99,
+    category: 'Plant-Based Kitchen',
+    desc: 'Large sharing bowl of fiery, herb-infused hot and sour soup with tofu and mixed vegetables.',
+    image: plantTomYumImg,
+    tags: ['Vegan', 'Spicy']
   },
   {
-    id: 'mango_lemonade',
-    name: 'Mango Lemonade',
-    price: 5.25,
-    category: 'Lemonades',
-    desc: 'Sweet, tropical Alphonso mango nectar mixed with our signature fresh lemonade.',
-    image: 'https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=500&auto=format&fit=crop&q=80',
-    tags: ['LRG']
+    id: 'eggplant_tofu_prik_pao',
+    name: 'Eggplant & Tofu Prik Pao',
+    price: 14.00,
+    category: 'Plant-Based Kitchen',
+    desc: 'Sweet purple eggplants and crispy organic tofu stir-fried with sweet chili paste and sweet basil.',
+    image: plantEggplantTofuImg,
+    tags: ['Vegan Option', 'Popular']
   },
   {
-    id: 'strawberry_lemonade',
-    name: 'Strawberry Lemonade',
-    price: 5.25,
-    category: 'Lemonades',
-    desc: 'A vibrant sweet blend of fresh organic strawberry puree and refreshing lemonade.',
-    image: 'https://images.unsplash.com/photo-1553530979-7ee52a2670c4?w=500&auto=format&fit=crop&q=80',
-    tags: ['LRG']
+    id: 'choo_chee_tofu',
+    name: 'Choo Chee Tofu',
+    price: 18.00,
+    category: 'Plant-Based Kitchen',
+    desc: 'Crispy organic tofu steak simmered in a thick, rich Choo Chee red curry cream, garnished with kaffir lime leaves.',
+    image: plantChooCheeTofuImg,
+    tags: ['Vegan Option', 'Premium']
   },
   {
-    id: 'peach_lemonade',
-    name: 'Peach Lemonade',
-    price: 5.25,
-    category: 'Lemonades',
-    desc: 'Juicy summer peach nectar blended with a refreshing, tart squeezed lemonade base.',
-    image: peachLemonadeImg,
-    tags: ['LRG']
-  },
-  {
-    id: 'passionfruit_lemonade',
-    name: 'Passionfruit Lemonade',
-    price: 5.25,
-    category: 'Lemonades',
-    desc: 'Fragrant tropical purple passionfruit pulp combined with chilled fresh lemonade.',
-    image: passionfruitLemonadeImg,
-    tags: ['LRG']
-  },
-  {
-    id: 'pineapple_lemonade',
-    name: 'Pineapple Lemonade',
-    price: 5.25,
-    category: 'Lemonades',
-    desc: 'Sweet golden pineapple nectar combined with tart fresh hand-squeezed lemonade.',
-    image: pineappleLemonadeImg,
-    tags: ['LRG']
+    id: 'tofu_khee_mao',
+    name: 'Tofu Khee Mao',
+    price: 14.00,
+    category: 'Plant-Based Kitchen',
+    desc: 'Spicy plant-based drunken noodles stir-fried with wide flat rice noodles, mixed vegetables, tofu, and fresh chilies.',
+    image: plantTofuKheeMaoImg,
+    tags: ['Vegan Option', 'Spicy']
   },
 
-  // MATCHA SPECIALS (5.95)
+  // SWEET ENDINGS (9 items)
   {
-    id: 'matcha_latte',
-    name: 'Matcha Latte',
-    price: 5.95,
-    category: 'Matcha Specials',
-    desc: 'Ceremonial green tea whisked with creamy organic milk.',
-    image: matchaLatteImg,
-    tags: ['LRG']
+    id: 'thai_rubies_in_coconut_milk',
+    name: 'Thai Rubies in Coconut Milk',
+    price: 9.99,
+    category: 'Sweet Endings',
+    desc: 'Water chestnuts served in sweet coconut milk with crushed ice.',
+    image: rubiesCoconutImg,
+    tags: ['Cold', 'Traditional']
   },
   {
-    id: 'matcha_lemonade',
-    name: 'Matcha Lemonade',
-    price: 5.95,
-    category: 'Matcha Specials',
-    desc: 'Fragrant organic green tea layered with tart, freshly squeezed iced lemonade.',
-    image: matchaLemonadeImg,
-    tags: ['LRG']
+    id: 'mango_sticky_rice',
+    name: 'Mango Sticky Rice',
+    price: 9.99,
+    category: 'Sweet Endings',
+    desc: 'Fresh mango served with sweet coconut sticky rice.',
+    image: mangoStickyRiceImg,
+    tags: ['Warm', 'Popular']
   },
   {
-    id: 'matcha_mango',
-    name: 'Matcha Mango',
-    price: 5.95,
-    category: 'Matcha Specials',
-    desc: 'Tropical layered drink combining sweet mango nectar and ceremonial green matcha.',
-    image: matchaMangoImg,
-    tags: ['LRG']
+    id: 'banana_sticky_rice',
+    name: 'Banana Sticky Rice',
+    price: 8.99,
+    category: 'Sweet Endings',
+    desc: 'Warm sticky rice with banana and coconut.',
+    image: bananaStickyRiceImg,
+    tags: ['Steamed', 'Traditional']
   },
   {
-    id: 'matcha_strawberry',
-    name: 'Matcha Strawberry',
-    price: 5.95,
-    category: 'Matcha Specials',
-    desc: 'Premium green tea layers floating above sweet organic strawberries and cold milk.',
-    image: matchaStrawberryImg,
-    tags: ['LRG']
+    id: 'black_rice_mango_dessert',
+    name: 'Black Rice Mango Dessert',
+    price: 9.99,
+    category: 'Sweet Endings',
+    desc: 'Nutty black rice paired with fresh mango.',
+    image: blackRiceMangoImg,
+    tags: ['Warm']
+  },
+  {
+    id: 'sweet_roti',
+    name: 'Sweet Roti',
+    price: 6.99,
+    category: 'Sweet Endings',
+    desc: 'Crispy Thai flatbread topped with condensed milk.',
+    image: menuDessert,
+    tags: ['Crispy', 'Popular']
+  },
+  {
+    id: 'fried_banana_with_honey',
+    name: 'Fried Banana with Honey',
+    price: 6.99,
+    category: 'Sweet Endings',
+    desc: 'Golden fried banana drizzled with honey.',
+    image: menuDessert,
+    tags: ['Crispy']
+  },
+  {
+    id: 'fried_cheesecake',
+    name: 'Fried Cheesecake',
+    price: 6.99,
+    category: 'Sweet Endings',
+    desc: 'Crispy outside with a creamy cheesecake center.',
+    image: menuDessert,
+    tags: ['Indulgent']
+  },
+  {
+    id: 'deep_fried_ice_cream',
+    name: 'Deep Fried Ice Cream',
+    price: 7.99,
+    category: 'Sweet Endings',
+    desc: 'Ice cream wrapped and fried for a hot and cold contrast.',
+    image: menuDessert,
+    tags: ['Cold & Hot']
+  },
+  {
+    id: 'thai_coconut_pancakes',
+    name: 'Thai Coconut Pancakes / Kanom Krok',
+    price: 8.99,
+    category: 'Sweet Endings',
+    desc: 'Bite-sized coconut rice pancakes with crispy edges and soft centers.',
+    image: menuDessert,
+    tags: ['Fresh', 'Authentic']
   },
 
-  // SEA SALT CREME (5.95)
+  // LUNCH EXPERIENCE (1 item)
   {
-    id: 'milk_tea_creme',
-    name: 'Milk Tea w/ Crème de Sea Salt',
-    price: 5.95,
-    category: 'Sea Salt Creme',
-    desc: 'Signature robust milk tea topped with our dense, salty sea salt cream foam.',
-    image: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=80',
-    tags: ['LRG']
-  },
-  {
-    id: 'chai_tea_creme',
-    name: 'Chai Tea w/ Crème de Sea Salt',
-    price: 5.95,
-    category: 'Sea Salt Creme',
-    desc: 'Rich, spiced chai tea layered beneath our signature savory velvet sea salt cream.',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc5c1a61cff?w=500&auto=format&fit=crop&q=80',
-    tags: ['LRG']
-  },
-  {
-    id: 'thai_tea_creme',
-    name: 'Thai Tea w/ Crème de Sea Salt',
-    price: 5.95,
-    category: 'Sea Salt Creme',
-    desc: 'Sweet orange spiced Thai tea topped with a luxurious cap of salty velvet sea salt foam.',
-    image: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=500&auto=format&fit=crop&q=80',
-    tags: ['LRG']
-  },
-  {
-    id: 'dark_coffee_creme',
-    name: 'Dark Coffee w/ Crème de Sea Salt',
-    price: 5.95,
-    category: 'Sea Salt Creme',
-    desc: 'Decadent slow-dripped bold iced coffee topped with sweet and salty sea salt cream layers.',
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop&q=80',
-    tags: ['LRG']
+    id: 'lunch_experience',
+    name: 'Lunch Experience',
+    price: 12.99,
+    category: 'Lunch Experience',
+    desc: 'Curated weekday lunch set featuring your choice of select fried rice or noodle entree, starter, and hot tea.',
+    image: lunchImg,
+    tags: ['Value', 'Weekday']
   }
 ]
 
 export const MENU_CATEGORIES = [
-  'All Brews',
-  'Smoothies',
-  'Slushes',
-  'Classic Tea',
-  'Milk Tea',
-  'Lemonades',
-  'Matcha Specials',
-  'Sea Salt Creme'
+  'All Dishes',
+  'Fried Rice',
+  'Southeast Asian Street Kitchen',
+  'Plant-Based Kitchen',
+  'Sweet Endings',
+  'Lunch Experience'
 ]

@@ -27,13 +27,13 @@ export default function HomePage() {
     setCurrentVideoIdx((prev) => (prev + 1) % VIDEO_PLAYLIST.length)
   }
 
-  // Navigate to /menu with a pre-selected drink id
+  // Navigate to /menu with a pre-selected item id
   const handleSteepNow = (themeKey) => {
     const map = {
-      matcha: 'matcha_latte',
-      oolong: 'special_blend_black_tea',
-      sakura: 'lychee_slush',
-      taro: 'taro_milk_tea'
+      matcha: 'bangkok_fire_basil_rice',
+      oolong: 'hainanese_chicken_rice',
+      sakura: 'mango_sticky_rice',
+      taro: 'northern_khao_soi'
     }
     navigate('/menu', { state: { initialDrinkId: map[themeKey] } })
     window.scrollTo({ top: 0 })

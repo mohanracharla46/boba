@@ -1,43 +1,43 @@
-// Premium brand hero theme content
+// Premium brand hero theme content (Southeast Asian / Thai Street Food)
 export const THEMES = {
   matcha: {
-    badge: '🔮 Premium Lavender Mint',
-    title: 'Artisanal Infusions, Steeped in Calm',
-    desc: 'Experience the soothing fusion of sweet French lavender blossoms and wild organic mountain mint.',
+    badge: '🔮 Bangkok Fire Basil Rice',
+    title: 'Fiery Wok-Tossed Street Flavors',
+    desc: "Experience the vibrant heat of our authentic holy basil stir-fried jasmine rice with bird's eye chilies and garlic.",
     accent: '#b7d9cb',
-    price: '$6.50',
-    tagline: 'Velvet Lavender Mint',
-    detail: 'Organic lavender floral distillate simmered with refreshing sweet mint and slow-cooked tapioca.',
-    homeTag: '🔮 Signature Brew'
+    price: '$15.99',
+    tagline: 'Bangkok Fire Basil Rice',
+    detail: 'Holy basil, bird’s eye chilies, garlic, and savory house sauce stir-fried over high fire.',
+    homeTag: '🔥 Best Seller'
   },
   oolong: {
-    badge: '🍂 Roasted Mountain Oolong',
-    title: 'Golden Harvest, Steeped in Heritage',
-    desc: 'Discover the deep, rich roasted notes of hand-selected high mountain rock oolong paired with organic stone fruits.',
+    badge: '🍂 Hainanese Chicken Rice',
+    title: 'Aromatic & Poached Comfort Class',
+    desc: 'Succulent poached chicken paired with ginger-garlic seasoned rice, chili vinaigrette, and dark soy sauce.',
     accent: '#C17F38',
-    price: '$6.75',
-    tagline: 'Oolong Lavender Peach',
-    detail: 'Slow-roasted Formosa Oolong cold-brewed with lavender flower buds and fresh organic white peach nectar.',
-    homeTag: '🔥 Popular Choice'
+    price: '$13.99',
+    tagline: 'Hainanese Chicken Rice',
+    detail: 'Slow-poached chicken served over premium seasoned jasmine rice with cucumber and ginger-garlic sauce.',
+    homeTag: '🌟 Street Classic'
   },
   sakura: {
-    badge: '🌸 Spring Sakura Blossom',
-    title: 'Blossom Infusions, Soft as Spring',
-    desc: 'Savor the delicate floral notes of freshly harvested cherry blossom petals paired with sweet, crisp tropical fruits.',
+    badge: '🌸 Sweet Mango Sticky Rice',
+    title: 'Fresh Mango & Rich Coconut Cream',
+    desc: 'Golden ripe honey mango slices served over warm coconut-infused sweet sticky rice with crispy mung beans.',
     accent: '#C67C8F',
-    price: '$7.00',
-    tagline: 'Sakura Lychee White Tea',
-    detail: 'Fresh spring cherry blossoms cold-infused with sweet red lychee and delicate silver needle white tea.',
-    homeTag: '🌸 Seasonal Craft'
+    price: '$9.99',
+    tagline: 'Mango Sticky Rice',
+    detail: 'Fragrant sweet sticky rice drizzled with warm coconut nectar, served alongside fresh mango.',
+    homeTag: '💖 Sweet Favorite'
   },
   taro: {
-    badge: '🔮 Velvet Taro Lavender',
-    title: 'Velvet Lavender, Rich & Calming',
-    desc: 'Indulge in a smooth, velvety blend of real organic taro root, soothing lavender blossom essence, and chewy boba.',
+    badge: '🔮 Northern Khao Soi',
+    title: 'Rich Coconut Curry Noodle Soup',
+    desc: 'Our chef’s signature aromatic golden curry broth with tender chicken, flat egg noodles, and crispy noodles on top.',
     accent: '#8A75AC',
-    price: '$6.85',
-    tagline: 'Taro Lavender Pearl',
-    detail: 'Organic mashed taro root blended with wildflower honey, lavender extract, and organic brown sugar tapioca pearls.',
-    homeTag: '🔥 Popular Choice'
+    price: '$18.99',
+    tagline: 'Northern Khao Soi',
+    detail: 'Rich coconut herb curry soup with egg noodles, pickled mustard greens, red shallots, and lime.',
+    homeTag: '🏆 Chef Special'
   }
 }
